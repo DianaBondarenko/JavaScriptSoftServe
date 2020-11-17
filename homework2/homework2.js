@@ -71,7 +71,7 @@ let a = Number(prompt("Введіть першу сторону трикутни
 let b = Number(prompt("Введіть другу сторону трикутника: "));
 let c = Number(prompt("Введіть третю сторону трикутника: "));
 if(isNaN(a) || isNaN(b) || isNaN(c)){
-    elert("Incorrect data");
+    alert("Incorrect data");
 } else if(a + b > c && a + c > b && b + c > a){
     let p = (a + b + c) / 2;
     let S = (Math.sqrt(p * (p - a) * (p - b) * (p - c))).toFixed(3);
