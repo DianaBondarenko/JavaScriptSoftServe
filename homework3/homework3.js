@@ -60,14 +60,14 @@ console.log(randArray(5));  // 223, 218, 256, 209, 371
 
 
 //  task4
-function raiseToDegree(a, b){
-    let result = a**b;
+function raiseToDegree(a, b) {
+    let result = a ** b;
     return result;
 }
 
-let a = prompt("Enter an integer: ");
-let b = prompt("Enter a degree: ");
-if(isNaN(a) || isNaN(b) || !Number.isInteger(a) || !Number.isInteger(b)){
+let a = Number(prompt("Enter an integer: "));
+let b = Number(prompt("Enter a degree: "));
+if (isNaN(a) || isNaN(b) || !Number.isInteger(a) || !Number.isInteger(b)) {
     alert("Incorrect data");
 } else {
     alert(raiseToDegree(a, b));
