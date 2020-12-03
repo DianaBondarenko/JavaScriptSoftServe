@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- task1 -->
+    <div id="test">First</div>
+    <script>
+        document.getElementById("test").innerHTML = "Last";
+    </script>
+
+    <!-- way2 -->
+    <!-- <script>
+        document.querySelector("div").innerHTML = "Last";
+    </script> -->
+    <br><br>
+
+
+    <!-- task2 -->
+    <img class="image" src="dog.jpg">
+    <script>
+        document.getElementsByClassName("image")[0].src = "cat.jpg";
+    </script>
+    <br><br>
+
+
+    <!-- task3 -->
+    <h2>Article header</h2>
+    <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+    </div>
+    <p>Another text</p>
+    <script>
+        let paragraphs = document.querySelectorAll("#text p");
+        for (let i = 0; i < paragraphs.length; i++) {
+            console.log(`Selector text ${i}: ${paragraphs[i].innerHTML}`);
+        }
+    </script>
+    <br><br>
+
+
+    <!-- task4 -->
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        let list = document.querySelectorAll("#list li");
+        console.log(
+            `${list[0].innerHTML}, ${list[4].innerHTML}, ${list[1].innerHTML}, ${list[3].innerHTML}, ${list[2].innerHTML}`
+        )
+    </script>
+
+    <!-- way2 -->
+    <!-- <script>
+        let list = document.getElementById("list");
+        console.log(list);
+        console.log(`${list.firstElementChild.innerHTML}, ${list.lastElementChild.innerHTML}, ${list.firstElementChild.nextElementSibling.innerHTML}, ${list.lastElementChild.previousElementSibling.innerHTML}, ${list.firstElementChild.nextElementSibling.nextElementSibling.innerHTML}`);
+    </script> -->
+    <br><br>
+
+
+    <!-- task5 -->
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+    <script>
+        document.querySelector("h1").style.background = "lightGreen";
+        document.getElementById("myDiv").firstElementChild.style.fontWeight = "bold";
+        document.getElementById("myDiv").firstElementChild.nextElementSibling.style.color = "red";
+        document.getElementById("myDiv").lastElementChild.previousElementSibling.style.textDecoration = "underline";
+        document.getElementById("myDiv").lastElementChild.style.fontStyle = "italic";
+        document.querySelector("#myList").style.listStyleType = "none";
+        document.querySelector("#myList").style.display = "flex";
+        document.querySelector("span").style.visibility = "hidden";
+    </script>
+    <br><br>
+
+
+    <!-- task6 -->
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+    <script>
+        let input1 = document.getElementById("input1");
+        input1.value = prompt("Input your message:");
+        let input2 = document.getElementById("input2");
+        input2.value = prompt("Input your second message:");
+        let temp = input1.value;
+        input1.value = input2.value;
+        input2.value = temp;
+    </script>
+
+
+    <!-- task7 -->
+    <script>
+        let main = document.createElement("main");
+        main.className = "mainClass check item";
+        let div = document.createElement("div");
+        div.id = "myDiv";
+        let p = document.createElement("p");
+        p.innerHTML = "First paragraph";
+        document.body.append(main);
+        main.prepend(div);
+        div.prepend(p);
+    </script>
+
+</body>
+
+</html>
