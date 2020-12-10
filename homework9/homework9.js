@@ -8,7 +8,7 @@ if ( $a.attr("href").match(/^https:\/\//) ) {
 //  task2
 let $headers = $("h2.head");
 $headers.css("background", "green");
-$inner = $headers.find(".inner");
+let $inner = $headers.find(".inner");
 $inner.css("fontSize", "35px");
 
 
