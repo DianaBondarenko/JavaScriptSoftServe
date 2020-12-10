@@ -6,8 +6,8 @@ function upperCase(str) {
         console.log("String doesn't start with uppercase character ");
     }
 }
-upperCase("regexp");
-upperCase("RegExp");
+upperCase("regexp");  // String doesn't start with uppercase character
+upperCase("RegExp");  // String starts with uppercase character
 
 
 //  task2
@@ -35,7 +35,7 @@ checkEmail("Qmail2@gmail.com");  // true
 //  task 3
 let regexp = /d(b+)(d)/i;
 console.log( regexp.exec("cdbBdbsbz") );
-//console.log( "cdbBdbsbz".match(regexp) );
+
 
 //  task4
 // let checkboxes = document.querySelectorAll("#checkboxes input");
@@ -59,9 +59,9 @@ console.log( regexp.exec("cdbBdbsbz") );
 //  task
 function swap(str) {
     let arr = str.split(" ");
-    return arr[1] + " " + arr[0];
+    return arr[1] + ", " + arr[0];
 }
-swap("Java Script");
+swap("Java Script");  // "Script, Java"
 
 
 //  task5
@@ -81,8 +81,8 @@ function checkEmail(email) {
         console.log("Email is incorrect!");
     }
 }
-checkEmail("my_mail@gmail.com");  
-checkEmail("#my_mail@gmail.com");  
+checkEmail("my_mail@gmail.com");  // Email is correct!
+checkEmail("#my_mail@gmail.com");  // Email is incorrect!
 
 
 //  task7
