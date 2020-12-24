@@ -1,5 +1,5 @@
-const now = new Date();
-const hours = now.getHours();
+let now = new Date();
+let hours = now.getHours();
 exports.greeting = function(user) {
     const userName = user.username;
     let greeting;
